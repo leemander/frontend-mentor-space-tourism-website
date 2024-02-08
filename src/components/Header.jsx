@@ -18,11 +18,10 @@ export default function Header() {
                   }
                   to="/"
                 >
-                  Home
+                  <span>00</span> Home
                 </Link>
               </li>
-            </ul>
-            <ul>
+
               <li>
                 <Link
                   className={
@@ -32,11 +31,10 @@ export default function Header() {
                   }
                   to="/destination"
                 >
-                  Destination
+                  <span>01</span> Destination
                 </Link>
               </li>
-            </ul>
-            <ul>
+
               <li>
                 <Link
                   className={
@@ -46,11 +44,9 @@ export default function Header() {
                   }
                   to="/crew"
                 >
-                  Crew
+                  <span>02</span> Crew
                 </Link>
               </li>
-            </ul>
-            <ul>
               <li>
                 <Link
                   className={
@@ -60,7 +56,7 @@ export default function Header() {
                   }
                   to="technology"
                 >
-                  Technology
+                  <span>03</span> Technology
                 </Link>
               </li>
             </ul>

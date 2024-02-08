@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url(./assets/BarlowCondensed-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Bellefair";
+  src: url(./assets/Bellefair-Regular.ttf);
+}
+
+:root {
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-400: hsl(231, 77%, 90%);
+  --color-neutral-900: hsl(230, 35%, 7%);
+
+  --font-size-xxxl: 9.375rem;
+  --font-size-xxl: 6.25rem;
+  --font-size-xl: 3.5rem;
+  --font-size-l: 2.25rem;
+  --font-size-m: 1.75rem;
+  --font-size-s: 1rem;
+  --font-size-xs: 0.875rem;
+}
+
+/*RESET*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/*RESET ENDS*/
+
+.container {
+  display: grid;
+  grid-template-columns: 3em 1fr 3em;
+}
+
+.space-between {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.two-column {
+  display: grid;
+  grid-column: 2;
+}
+
+h1:has(+ .two-column) {
+  grid-column: 2;
+}
+
+@media (min-width: 30em) {
+  .two-column {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+body {
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-400);
+  font-family: "Barlow Condensed";
+  line-height: 1.7;
+  margin: 0;
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-neutral-100);
+  font-family: "Bellefair";
+  text-transform: uppercase;
+}
+
+h1 > span {
+  opacity: 0.5;
+}
+
+header .space-between {
+  grid-column: 2/-1;
+}

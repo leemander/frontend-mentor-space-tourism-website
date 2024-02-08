@@ -7,7 +7,9 @@ export default function Crew({ crew }) {
       <div className="container">
         <div className="two-column">
           <div className="crew__content">
-            <h1>02 Meet Your Crew</h1>
+            <h1>
+              <span>02</span> Meet Your Crew
+            </h1>
             <div className="crew__role">{crew[currentCrewIndex].role}</div>
             <h2>{crew[currentCrewIndex].name}</h2>
             <p>{crew[currentCrewIndex].bio}</p>

@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
+  const currentPage = useLocation().pathname;
   return (
     <header>
       <div className="container">
@@ -9,28 +10,56 @@ export default function Header() {
           <nav className="header__nav">
             <ul>
               <li>
-                <Link className="header__link" to="/">
+                <Link
+                  className={
+                    currentPage === "/"
+                      ? "header__link current"
+                      : "header__link"
+                  }
+                  to="/"
+                >
                   Home
                 </Link>
               </li>
             </ul>
             <ul>
               <li>
-                <Link className="header__link" to="/destination">
+                <Link
+                  className={
+                    currentPage === "/destination"
+                      ? "header__link current"
+                      : "header__link"
+                  }
+                  to="/destination"
+                >
                   Destination
                 </Link>
               </li>
             </ul>
             <ul>
               <li>
-                <Link className="header__link" to="/crew">
+                <Link
+                  className={
+                    currentPage === "/crew"
+                      ? "header__link current"
+                      : "header__link"
+                  }
+                  to="/crew"
+                >
                   Crew
                 </Link>
               </li>
             </ul>
             <ul>
               <li>
-                <Link className="header__link" to="technology">
+                <Link
+                  className={
+                    currentPage === "/technology"
+                      ? "header__link current"
+                      : "header__link"
+                  }
+                  to="technology"
+                >
                   Technology
                 </Link>
               </li>

@@ -9,11 +9,11 @@ export default function Tech({ tech }) {
           <span>03</span> Space Launch 101
         </h1>
         <div className="two-column">
-          <div className="tech__content">
+          <div className="tech__sidebar">
             <div className="tech__controls">
               <button
                 aria-label="technology 1"
-                className="tech__button"
+                className="tech__button current"
                 onClick={() => setCurrentTechIndex(0)}
               >
                 1
@@ -33,11 +33,13 @@ export default function Tech({ tech }) {
                 3
               </button>
             </div>
-            <p className="tech__eyebrow">The Terminology</p>
-            <h2>{tech[currentTechIndex].name}</h2>
-            <p>{tech[currentTechIndex].description}</p>
+            <div className="tech__content">
+              <p className="tech__eyebrow">The Terminology...</p>
+              <h2 className="tech__name">{tech[currentTechIndex].name}</h2>
+              <p className="tech__desc">{tech[currentTechIndex].description}</p>
+            </div>
           </div>
-          <picture>
+          <picture className="tech__img">
             <source
               media="(min-width: 30em)"
               srcSet={tech[currentTechIndex].images.portrait}

@@ -259,7 +259,6 @@ header .space-between {
 main {
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
   margin: 0;
 }
@@ -404,7 +403,7 @@ body:has(.crew) {
 }
 
 .crew .two-column {
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 55% 45%;
 }
 
 .crew h1 {
@@ -459,5 +458,5 @@ body:has(.crew) {
 .crew__img {
   aspect-ratio: 1;
   height: 645px;
-  object-fit: contain;
+  object-fit: cover;
 }

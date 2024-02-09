@@ -11,12 +11,12 @@ export default function Crew({ crew }) {
               <span>02</span> Meet Your Crew
             </h1>
             <div className="crew__role">{crew[currentCrewIndex].role}</div>
-            <h2>{crew[currentCrewIndex].name}</h2>
-            <p>{crew[currentCrewIndex].bio}</p>
-            <div className="flex">
+            <h2 className="crew__name">{crew[currentCrewIndex].name}</h2>
+            <p className="crew__bio">{crew[currentCrewIndex].bio}</p>
+            <div className="crew__buttons">
               <button
                 aria-label="crew member 1"
-                className="crew__button"
+                className="crew__button current"
                 onClick={() => setCurrentCrewIndex(0)}
               ></button>
               <button
@@ -36,7 +36,13 @@ export default function Crew({ crew }) {
               ></button>
             </div>
           </div>
-          <img src={crew[currentCrewIndex].images.webp} alt="" />
+          <div>
+            <img
+              className="crew__img"
+              src={crew[currentCrewIndex].images.webp}
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </main>

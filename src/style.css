@@ -20,25 +20,25 @@
   --color-neutral-900: hsl(230, 35%, 7%);
 
   --font-size-xxxl: 9.375rem;
-  --font-size-xxl: 3.5rem;
-  --font-size-xl: 1.5rem;
-  --font-size-l: 1.25rem;
-  --font-size-m: 1rem;
-  --font-size-s: 1rem;
+  --font-size-xxl: 6.25rem;
+  --font-size-xl: 3.5rem;
+  --font-size-l: 2.25rem;
+  --font-size-m: 1.75rem;
+  --font-size-s: 1.125rem;
   --font-size-xs: 1rem;
-  --font-size-xxs: 1rem;
+  --font-size-xxs: 0.875rem;
 }
 
 @media (max-width: 30em) {
   :root {
     --font-size-xxxl: 5rem;
-    --font-size-xxl: 6.25rem;
-    --font-size-xl: 3.5rem;
-    --font-size-l: 2.25rem;
-    --font-size-m: 1.75rem;
-    --font-size-s: 1.125rem;
+    --font-size-xxl: 3.5rem;
+    --font-size-xl: 1.75rem;
+    --font-size-l: 1.25rem;
+    --font-size-m: 1rem;
+    --font-size-s: 1rem;
     --font-size-xs: 1rem;
-    --font-size-xxs: 0.875rem;
+    --font-size-xxs: 1rem;
   }
 }
 /*RESET*/
@@ -301,4 +301,82 @@ div:has(> .home__button) {
   place-content: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+body:has(.destination) {
+  background-image: url(./assets/destination/background-destination-desktop.jpg);
+}
+
+.destination {
+  justify-content: start;
+}
+
+.destination .two-column {
+  margin-block-start: 3rem;
+}
+
+.destination .two-column > img {
+  margin: auto;
+}
+
+.destination__content {
+  margin-inline: auto;
+}
+
+.destination__controls {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.destination__controls > button {
+  background: transparent;
+  border: 0;
+  color: var(--color-neutral-400);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  padding-inline: 0;
+}
+
+.destination__controls > button.current {
+  border-bottom: 3px solid;
+  color: white;
+}
+
+.destination__name {
+  font-size: var(--font-size-xxl);
+  margin-top: 3rem;
+}
+
+.destination__desc {
+  max-width: 27.5rem;
+  min-height: 9rem;
+  text-wrap: pretty;
+}
+
+.destination hr {
+  background-color: var(--color-neutral-100);
+  display: block;
+  opacity: 0.1;
+  max-width: 27.5rem;
+  margin: 3rem 0 1rem 0;
+}
+
+.destination__content .two-column {
+  margin: 0;
+}
+
+.destination__label {
+  font-size: var(--font-size-xxs);
+  letter-spacing: 2.35px;
+  text-transform: uppercase;
+}
+
+.destination__fact {
+  color: var(--color-neutral-100);
+  font-family: "Bellefair";
+  font-size: var(--font-size-l);
+  text-transform: uppercase;
+  margin-block-start: 0.5rem;
 }

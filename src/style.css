@@ -24,8 +24,9 @@
   --font-size-xl: 3.5rem;
   --font-size-l: 2.25rem;
   --font-size-m: 1.75rem;
-  --font-size-s: 1rem;
-  --font-size-xs: 0.875rem;
+  --font-size-s: 1.125rem;
+  --font-size-xs: 1rem;
+  --font-size-xxs: 0.875rem;
 }
 
 /*RESET*/
@@ -150,12 +151,20 @@ h1:has(+ .two-column) {
 
 body {
   background-color: var(--color-neutral-900);
+  background-size: cover;
   color: var(--color-neutral-400);
   font-family: "Barlow Condensed";
+  font-size: var(--font-size-s);
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 2em;
   margin: 0;
   min-height: 100dvh;
+}
+
+#root {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr;
 }
 
 h1,
@@ -184,6 +193,8 @@ header .space-between {
   backdrop-filter: blur(1em) saturate(100%);
   color: var(--color-neutral-100);
   display: flex;
+  flex-wrap: wrap;
+  font-size: var(--font-size-xs);
   gap: 3em;
   justify-content: start;
   list-style: none;
@@ -213,6 +224,53 @@ header .space-between {
   font-weight: 700;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
 body:has(.home) {
   background-image: url(./assets/home/background-home-desktop.jpg);
+}
+
+.home__content {
+  margin: auto;
+}
+
+.home__eyebrow {
+  font-size: var(--font-size-m);
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+
+.home__content > h1 {
+  font-size: var(--font-size-xxxl);
+  font-weight: 400;
+  margin-block: 1rem 0;
+}
+
+.home__content > h1 + p {
+  max-width: 27.5rem;
+}
+
+div:has(> .home__button) {
+  display: flex;
+}
+
+.home__button {
+  aspect-ratio: 1;
+  background-color: var(--color-neutral-100);
+  border-radius: 50%;
+  color: var(--color-neutral-900);
+  display: grid;
+  font-family: "Bellefair";
+  font-size: 2rem;
+  height: 17.125rem;
+  letter-spacing: 0.125rem;
+  margin: auto auto 0 auto;
+  place-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }

@@ -307,7 +307,51 @@ main.home > .container {
 }
 
 body:has(.home) {
-  background-image: url(./assets/home/background-home-desktop.jpg);
+  background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+body:has(.destination) {
+  background-image: url(./assets/destination/background-destination-mobile.jpg);
+}
+
+body:has(.crew) {
+  background-image: url(./assets/crew/background-crew-mobile.jpg);
+}
+
+body:has(.tech) {
+  background-image: url(./assets/technology/background-technology-mobile.jpg);
+}
+
+@media (min-width: 40em) {
+  body:has(.home) {
+    background-image: url(./assets/home/background-home-tablet.jpg);
+  }
+
+  body:has(.destination) {
+    background-image: url(./assets/destination/background-destination-tablet.jpg);
+  }
+  body:has(.crew) {
+    background-image: url(./assets/crew/background-crew-tablet.jpg);
+  }
+  body:has(.tech) {
+    background-image: url(./assets/technology/background-technology-tablet.jpg);
+  }
+}
+
+@media (min-width: 60em) {
+  body:has(.home) {
+    background-image: url(./assets/home/background-home-desktop.jpg);
+  }
+
+  body:has(.destination) {
+    background-image: url(./assets/destination/background-destination-desktop.jpg);
+  }
+  body:has(.crew) {
+    background-image: url(./assets/crew/background-crew-desktop.jpg);
+  }
+  body:has(.tech) {
+    background-image: url(./assets/technology/background-technology-desktop.jpg);
+  }
 }
 
 .home h1 {
@@ -352,10 +396,6 @@ div:has(> .home__button) {
   place-content: center;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-body:has(.destination) {
-  background-image: url(./assets/destination/background-destination-desktop.jpg);
 }
 
 main:not(.home) h1 {
@@ -441,10 +481,6 @@ main:not(.home) h1 {
   margin-block-start: 0.5rem;
 }
 
-body:has(.crew) {
-  background-image: url(./assets/crew/background-crew-desktop.jpg);
-}
-
 main.crew > .container {
   grid-template-rows: 1fr;
   align-items: start;
@@ -506,10 +542,6 @@ main.crew > .container {
 .crew__img {
   align-self: end;
   object-position: bottom;
-}
-
-body:has(.tech) {
-  background-image: url(./assets/technology/background-technology-desktop.jpg);
 }
 
 .tech h1 {

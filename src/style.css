@@ -671,9 +671,44 @@ main.crew > .container {
 
 .tech__desc {
   max-width: 37.5rem;
+  text-wrap: pretty;
 }
 
 .tech__img {
   margin-inline-start: auto;
   align-self: center;
+}
+
+@media (max-width: 60em) {
+  .tech .two-column {
+    grid-template-columns: subgrid;
+    grid-column: 1/-1;
+  }
+
+  .tech__img {
+    order: -1;
+    grid-column: 1 / -1;
+  }
+
+  .tech__sidebar {
+    gap: 1rem;
+    grid-template-columns: unset;
+    grid-column: 2;
+    justify-items: center;
+    margin: 0;
+  }
+
+  .tech__controls {
+    flex-direction: row;
+  }
+
+  .tech__button {
+    font-size: 1.5rem;
+    height: 3.75rem;
+  }
+
+  .tech__desc {
+    max-width: 28.625rem;
+    min-height: 11.25rem;
+  }
 }

@@ -32,7 +32,7 @@
   --font-size-xxs: 0.875rem;
 }
 
-@media (max-width: 30em) {
+@media (max-width: 60em) {
   :root {
     --font-size-xxxl: 5rem;
     --font-size-xxl: 3.5rem;
@@ -143,6 +143,12 @@ textarea:not([rows]) {
   grid-template-columns: 3em 6em 1fr 3em;
 }
 
+@media (max-width: 60em) {
+  .container {
+    grid-template-columns: 3em 1fr 3em;
+  }
+}
+
 .space-between {
   align-items: center;
   display: flex;
@@ -152,15 +158,31 @@ textarea:not([rows]) {
 .two-column {
   display: grid;
   grid-column: 3;
-  grid-template-rows: 100%;
   margin: 0;
 }
 
-h1:has(+ .two-column) {
-  grid-column: 3 / -1;
+@media (max-width: 60em) {
+  main > .container {
+    grid-column: 2;
+  }
+
+  .two-column {
+    grid-column: 2;
+  }
 }
 
-@media (min-width: 30em) {
+h1:has(+ .two-column) {
+  grid-column: 2 / -1;
+  text-align: start;
+}
+
+@media (min-width: 60em) {
+  h1:has(+ .two-column) {
+    grid-column: 3 / -1;
+  }
+}
+
+@media (min-width: 60em) {
   .two-column {
     grid-template-columns: 1fr 1fr;
   }
@@ -178,7 +200,7 @@ body {
   min-height: 100dvh;
 }
 
-@media (max-width: 30em) {
+@media (max-width: 60em) {
   body {
     text-align: center;
   }
@@ -252,11 +274,31 @@ header .space-between {
   font-weight: 700;
 }
 
+@media (max-width: 60em) {
+  .header__nav > ul {
+    gap: 2rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header__nav > ul::before,
+  .header__nav a > span {
+    display: none;
+  }
+}
+
 main > .container {
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100%;
   padding-block-start: 3rem;
+}
+
+@media (max-width: 60em) {
+  main > .container {
+    grid-template-rows: 1fr;
+  }
 }
 
 main.home > .container {

@@ -490,7 +490,7 @@ main:not(.home) h1 {
 
 @media (max-width: 60em) {
   .destination .two-column {
-    margin-block-start: 0;
+    margin-block-start: 3rem;
   }
 
   .destination__img {
@@ -580,6 +580,42 @@ main.crew > .container {
 .crew__img {
   align-self: end;
   object-position: bottom;
+}
+
+@media (max-width: 60em) {
+  .crew .two-column {
+    grid-template-columns: unset;
+  }
+
+  .crew h1 {
+    text-align: start;
+  }
+
+  .crew__role {
+    font-size: 1.5rem;
+    margin-block-start: 3rem;
+  }
+
+  .crew__name {
+    font-size: 2.5rem;
+    margin-block-start: 0;
+  }
+
+  .crew__bio {
+    margin-inline: auto;
+  }
+
+  .crew__buttons {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .crew__img {
+    justify-self: center;
+    max-height: 500px;
+    object-fit: contain;
+  }
 }
 
 .tech h1 {

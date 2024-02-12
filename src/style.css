@@ -32,9 +32,8 @@
   --font-size-xxs: 0.875rem;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 30em) {
   :root {
-    --font-size-xxxl: 5rem;
     --font-size-xxl: 3.5rem;
     --font-size-xl: 1.75rem;
     --font-size-l: 1.25rem;
@@ -44,6 +43,7 @@
     --font-size-xxs: 1rem;
   }
 }
+
 /*RESET*/
 
 /* Box sizing rules */
@@ -354,10 +354,6 @@ body:has(.tech) {
   }
 }
 
-.home h1 {
-  font-family: var(--font-family-serif);
-}
-
 .home__content {
   margin: auto;
 }
@@ -369,6 +365,7 @@ body:has(.tech) {
 }
 
 .home__content > h1 {
+  font-family: var(--font-family-serif);
   font-size: var(--font-size-xxxl);
   font-weight: 400;
   margin-block: 1rem 0;
@@ -396,6 +393,16 @@ div:has(> .home__button) {
   place-content: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media (max-width: 60em) {
+  main.home > .container {
+    place-content: unset;
+  }
+
+  .home__button {
+    margin: auto;
+  }
 }
 
 main:not(.home) h1 {

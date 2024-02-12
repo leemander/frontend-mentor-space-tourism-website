@@ -9,7 +9,7 @@ export default function Crew({ crew }) {
           <div className="crew__content">
             <h1>
               <span>02</span> Meet Your Crew
-            </h1>
+            </h1>{" "}
             <div className="crew__role">{crew[currentCrewIndex].role}</div>
             <h2 className="crew__name">{crew[currentCrewIndex].name}</h2>
             <p className="crew__bio">{crew[currentCrewIndex].bio}</p>
@@ -36,13 +36,12 @@ export default function Crew({ crew }) {
               ></button>
             </div>
           </div>
-          <div>
-            <img
-              className="crew__img"
-              src={crew[currentCrewIndex].images.webp}
-              alt=""
-            />
-          </div>
+
+          <img
+            className="crew__img"
+            src={crew[currentCrewIndex].images.webp}
+            alt=""
+          />
         </div>
       </div>
     </main>

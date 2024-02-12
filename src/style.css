@@ -202,10 +202,6 @@ h1 > span {
   opacity: 0.5;
 }
 
-header {
-  padding-block-start: 1em;
-}
-
 header .space-between {
   grid-column: 2/-1;
 }
@@ -218,10 +214,12 @@ header .space-between {
   display: flex;
   flex-wrap: wrap;
   font-size: var(--font-size-xs);
-  gap: 3em;
+  gap: 3rem;
+  height: 6rem;
   justify-content: start;
   list-style: none;
-  padding: 2em 0 2em 8em;
+  margin-block-start: 1.8rem;
+  padding-inline: 8em 0;
   position: relative;
   text-transform: uppercase;
   width: 58vw;
@@ -238,9 +236,10 @@ header .space-between {
   content: "";
   height: 0.125em;
   opacity: 0.1;
-  width: 55%;
   position: absolute;
   right: 95%;
+  top: 50%;
+  width: 55%;
 }
 
 .header__nav a {
@@ -253,12 +252,16 @@ header .space-between {
   font-weight: 700;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
+main > .container {
+  display: grid;
+  grid-template-rows: auto 1fr;
   height: 100%;
-  justify-content: center;
-  margin: 0;
+  padding-block-start: 3rem;
+}
+
+main.home > .container {
+  grid-template-rows: unset;
+  place-content: center;
 }
 
 body:has(.home) {
@@ -322,7 +325,7 @@ main:not(.home) h1 {
 }
 
 .destination h1 {
-  margin-block-start: 2.225rem;
+  margin-block-start: 0;
 }
 
 .destination .two-column {
@@ -400,8 +403,14 @@ body:has(.crew) {
   background-image: url(./assets/crew/background-crew-desktop.jpg);
 }
 
+main.crew > .container {
+  grid-template-rows: 1fr;
+  align-items: start;
+}
+
 .crew .two-column {
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 58% 1fr;
+  height: 100%;
 }
 
 .crew h1 {
@@ -411,7 +420,6 @@ body:has(.crew) {
 .crew__content {
   display: flex;
   flex-direction: column;
-  padding-inline-start: 2.5rem;
 }
 
 .crew__role {
@@ -454,9 +462,8 @@ body:has(.crew) {
 }
 
 .crew__img {
-  aspect-ratio: 1;
-  height: 645px;
-  object-fit: contain;
+  align-self: end;
+  object-position: bottom;
 }
 
 body:has(.tech) {
@@ -475,6 +482,7 @@ body:has(.tech) {
   display: grid;
   gap: 4rem;
   grid-template-columns: auto 1fr;
+  margin-block: auto;
 }
 
 .tech__controls {
@@ -501,19 +509,16 @@ body:has(.tech) {
   color: var(--color-neutral-900);
 }
 
-.tech__content {
-  margin-block: auto 10rem;
-}
-
 .tech__eyebrow {
   letter-spacing: 2.7px;
+  margin: 0;
   text-transform: uppercase;
 }
 
 .tech__name {
   font-family: var(--font-family-serif);
   font-size: var(--font-size-xl);
-  margin-block-start: 0;
+  margin-block-start: 0.5rem;
 }
 
 .tech__desc {
@@ -522,4 +527,5 @@ body:has(.tech) {
 
 .tech__img {
   margin-inline-start: auto;
+  align-self: center;
 }

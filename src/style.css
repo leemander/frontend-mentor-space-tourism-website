@@ -295,12 +295,6 @@ main > .container {
   padding-block-start: 3rem;
 }
 
-@media (max-width: 60em) {
-  main > .container {
-    grid-template-rows: 1fr;
-  }
-}
-
 main.home > .container {
   grid-template-rows: unset;
   place-content: center;
@@ -409,6 +403,12 @@ main:not(.home) h1 {
   letter-spacing: 4.75px;
 }
 
+@media (max-width: 60em) {
+  main:not(.home) h1 {
+    font-size: 1.25rem;
+  }
+}
+
 .destination {
   justify-content: start;
 }
@@ -486,6 +486,37 @@ main:not(.home) h1 {
   font-size: var(--font-size-l);
   text-transform: uppercase;
   margin-block-start: 0.5rem;
+}
+
+@media (max-width: 60em) {
+  .destination .two-column {
+    margin-block-start: 0;
+  }
+
+  .destination__img {
+    max-width: 18.75rem;
+  }
+
+  .destination__controls {
+    justify-content: center;
+    margin-block-start: 2rem;
+  }
+
+  .destination__desc {
+    margin: 0;
+    max-width: 36rem;
+  }
+
+  .destination hr {
+    margin: 0;
+    max-width: unset;
+    width: 100%;
+  }
+
+  .destination__facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 main.crew > .container {

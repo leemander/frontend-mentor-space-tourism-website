@@ -9,7 +9,11 @@ export default function Destination({ destinations }) {
           <span>01</span> Pick Your Destination
         </h1>
         <div className="two-column">
-          <img src={destinations[currentDestIndex].images.webp} alt="" />
+          <img
+            src={destinations[currentDestIndex].images.webp}
+            alt=""
+            className="destination__img"
+          />
           <div className="destination__content">
             <div className="destination__controls">
               <button
@@ -30,7 +34,7 @@ export default function Destination({ destinations }) {
                 {destinations[currentDestIndex].description}
               </p>
               <hr />
-              <div className="two-column">
+              <div className="destination__facts">
                 <div>
                   <p className="destination__label">Avg. Distance</p>
                   <p className="destination__fact">

@@ -489,6 +489,13 @@ main:not(.home) h1 {
   }
 }
 
+@media (max-width: 60em) {
+  main:not(.home) h1 {
+    text-align: center;
+    font-size: var(--font-size-m);
+  }
+}
+
 .destination {
   justify-content: start;
 }
@@ -596,6 +603,24 @@ main:not(.home) h1 {
   .destination__facts {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 30em) {
+  .destination .two-column {
+    margin: 0;
+  }
+
+  .destination__img {
+    max-width: 10.625rem;
+  }
+
+  .destination__controls {
+    margin: 0;
+  }
+
+  .destination__facts {
+    grid-template-columns: 1fr;
   }
 }
 

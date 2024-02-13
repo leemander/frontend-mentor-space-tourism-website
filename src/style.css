@@ -350,16 +350,17 @@ header .space-between {
   }
 
   .header__nav {
-    display: none;
+    position: fixed;
+    right: -100vw;
+    height: 100dvh;
+    top: 0;
+    transition: ease-in-out 0.4s;
     z-index: 100;
   }
 
   .header__nav.open {
-    display: block;
-    position: fixed;
     right: 0;
-    height: 100dvh;
-    top: 0;
+    width: 68dvw;
   }
 
   .header__nav > ul {

@@ -4,9 +4,24 @@ import { Link, useLocation } from "react-router-dom";
 export default function Header() {
   const currentPage = useLocation().pathname;
   const [menuOpen, setMenuOpen] = useState(false);
+
   function toggleMenu() {
     setMenuOpen((prev) => !prev);
   }
+
+  function handleClick(e) {
+    const target = e.target;
+    if (
+      target.id !== "toggle-menu" &&
+      menuOpen &&
+      target.closest("nav") === null //checks to see if target isn't the nav or its descendent
+    ) {
+      setMenuOpen(false);
+    }
+  }
+
+  window.addEventListener("click", (e) => handleClick(e));
+
   return (
     <header>
       <div className="container">
@@ -15,6 +30,7 @@ export default function Header() {
           <button
             aria-label="toggle navigation menu"
             className="header__hamburger"
+            id="toggle-menu"
             onClick={toggleMenu}
           ></button>
           <nav className={menuOpen ? "header__nav open" : "header__nav"}>

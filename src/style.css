@@ -731,8 +731,13 @@ main.crew > .container {
   aspect-ratio: 1;
   border-radius: 50%;
   border: 0;
+  cursor: pointer;
   height: 15px;
   opacity: 0.5;
+}
+
+.crew__button:is(:hover, :focus-visible) {
+  opacity: 0.75;
 }
 
 .crew__button.current {

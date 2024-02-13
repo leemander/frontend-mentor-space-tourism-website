@@ -16,22 +16,38 @@ export default function Crew({ crew }) {
             <div className="crew__buttons">
               <button
                 aria-label="crew member 1"
-                className="crew__button current"
+                className={
+                  currentCrewIndex === 0
+                    ? "crew__button current"
+                    : "crew__button"
+                }
                 onClick={() => setCurrentCrewIndex(0)}
               ></button>
               <button
                 aria-label="crew member 2"
-                className="crew__button"
+                className={
+                  currentCrewIndex === 1
+                    ? "crew__button current"
+                    : "crew__button"
+                }
                 onClick={() => setCurrentCrewIndex(1)}
               ></button>
               <button
                 aria-label="crew member 3"
-                className="crew__button"
+                className={
+                  currentCrewIndex === 2
+                    ? "crew__button current"
+                    : "crew__button"
+                }
                 onClick={() => setCurrentCrewIndex(2)}
               ></button>
               <button
                 aria-label="crew member 4"
-                className="crew__button"
+                className={
+                  currentCrewIndex === 3
+                    ? "crew__button current"
+                    : "crew__button"
+                }
                 onClick={() => setCurrentCrewIndex(3)}
               ></button>
             </div>

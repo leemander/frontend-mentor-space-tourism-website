@@ -364,6 +364,9 @@ header .space-between {
 
   .header__nav li {
     display: flex;
+    flex-direction: row;
+    height: unset;
+    justify-content: start;
     position: relative;
     text-align: start;
     width: 100%;
@@ -375,6 +378,7 @@ header .space-between {
     display: block;
     height: 100%;
     margin-inline-start: auto;
+    position: unset;
     width: 4px;
   }
 
@@ -521,14 +525,14 @@ main:not(.home) h1 {
 
 @media (max-width: 60em) {
   main:not(.home) h1 {
-    font-size: 1.25rem;
+    font-size: var(--font-size-m);
+    text-align: start;
   }
 }
 
-@media (max-width: 60em) {
+@media (max-width: 30em) {
   main:not(.home) h1 {
     text-align: center;
-    font-size: var(--font-size-m);
   }
 }
 
@@ -667,12 +671,13 @@ main.crew > .container {
 
 .crew .two-column {
   grid-template-columns: 58% 1fr;
+  grid-template-rows: auto 1fr;
   height: 100%;
 }
 
 .crew h1 {
   margin: 0;
-  grid-column: 1 / -1;
+  grid-column: 1;
 }
 
 .crew__content {
@@ -721,12 +726,14 @@ main.crew > .container {
 
 .crew__img {
   align-self: end;
+  grid-row: 1 /-1;
+  grid-column: 2;
   object-position: bottom;
 }
 
 @media (max-width: 60em) {
   .crew .two-column {
-    grid-template-columns: unset;
+    grid-template-columns: 1fr;
   }
 
   .crew h1 {
@@ -754,6 +761,8 @@ main.crew > .container {
   }
 
   .crew__img {
+    grid-column: unset;
+    grid-row: -1;
     justify-self: center;
     max-height: 500px;
     object-fit: contain;

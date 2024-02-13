@@ -502,6 +502,11 @@ div:has(> .home__button) {
   place-content: center;
   text-decoration: none;
   text-transform: uppercase;
+  transition: box-shadow 0.5s;
+}
+
+.home__button:is(:hover, :focus-visible) {
+  box-shadow: 0 0 0 5.5rem rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 60em) {
@@ -522,6 +527,10 @@ div:has(> .home__button) {
   .home__button {
     font-size: 1.25rem;
     height: 9.375rem;
+  }
+
+  .home__button:is(:hover, :focus-visible) {
+    box-shadow: unset;
   }
 
   .home p {

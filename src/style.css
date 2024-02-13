@@ -636,6 +636,7 @@ main.crew > .container {
 
 .crew h1 {
   margin: 0;
+  grid-column: 1 / -1;
 }
 
 .crew__content {
@@ -720,6 +721,48 @@ main.crew > .container {
     justify-self: center;
     max-height: 500px;
     object-fit: contain;
+  }
+}
+
+@media (max-width: 30em) {
+  .crew .two-column {
+    grid-template-rows: auto auto 1fr;
+  }
+
+  .crew h1 {
+    height: fit-content;
+    order: -10;
+  }
+
+  .crew__content {
+    margin: auto;
+  }
+
+  .crew__img {
+    border-block-end: 1px solid hsla(0, 0%, 59%, 0.5);
+    justify-self: unset;
+    margin-block-start: 2rem;
+    height: 223px;
+    order: -1;
+    width: 100%;
+  }
+
+  .crew__buttons {
+    margin-block: 0 2rem;
+    order: -1;
+  }
+
+  .crew__role {
+    font-size: var(--font-size-m);
+    margin: 0;
+  }
+
+  .crew__name {
+    font-size: var(--font-size-xl);
+  }
+
+  .crew__bio {
+    min-height: 10rem;
   }
 }
 

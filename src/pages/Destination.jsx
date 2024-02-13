@@ -17,14 +17,29 @@ export default function Destination({ destinations }) {
           <div className="destination__content">
             <div className="destination__controls">
               <button
-                className="current"
+                className={currentDestIndex === 0 ? "current" : ""}
                 onClick={() => setCurrentDestIndex(0)}
               >
                 Moon
               </button>
-              <button onClick={() => setCurrentDestIndex(1)}>Mars</button>
-              <button onClick={() => setCurrentDestIndex(2)}>Europa</button>
-              <button onClick={() => setCurrentDestIndex(3)}>Titan</button>
+              <button
+                className={currentDestIndex === 1 ? "current" : ""}
+                onClick={() => setCurrentDestIndex(1)}
+              >
+                Mars
+              </button>
+              <button
+                className={currentDestIndex === 2 ? "current" : ""}
+                onClick={() => setCurrentDestIndex(2)}
+              >
+                Europa
+              </button>
+              <button
+                className={currentDestIndex === 3 ? "current" : ""}
+                onClick={() => setCurrentDestIndex(3)}
+              >
+                Titan
+              </button>
             </div>
             <div>
               <h2 className="destination__name">

@@ -13,21 +13,33 @@ export default function Tech({ tech }) {
             <div className="tech__controls">
               <button
                 aria-label="technology 1"
-                className="tech__button current"
+                className={
+                  currentTechIndex === 0
+                    ? "tech__button current"
+                    : "tech__button"
+                }
                 onClick={() => setCurrentTechIndex(0)}
               >
                 1
               </button>
               <button
                 aria-label="technology 2"
-                className="tech__button"
+                className={
+                  currentTechIndex === 1
+                    ? "tech__button current"
+                    : "tech__button"
+                }
                 onClick={() => setCurrentTechIndex(1)}
               >
                 2
               </button>
               <button
                 aria-label="technology 3"
-                className="tech__button"
+                className={
+                  currentTechIndex === 2
+                    ? "tech__button current"
+                    : "tech__button"
+                }
                 onClick={() => setCurrentTechIndex(2)}
               >
                 3

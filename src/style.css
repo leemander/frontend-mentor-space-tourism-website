@@ -375,7 +375,7 @@ header .space-between {
     flex-direction: column;
     height: 100%;
     justify-content: start;
-    padding-block-start: 11.5rem;
+    padding-block-start: 7.5rem;
     padding-inline-start: 2rem;
     width: 68dvw;
   }

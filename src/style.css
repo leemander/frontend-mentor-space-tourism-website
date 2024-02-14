@@ -276,7 +276,7 @@ header .space-between {
   background-color: var(--color-neutral-100);
   content: "";
   height: 0.125em;
-  opacity: 0.1;
+  opacity: 0.25;
   position: absolute;
   left: 0;
   top: 50%;
@@ -475,7 +475,7 @@ main.home > .container {
   font-family: var(--font-family-serif);
   font-size: var(--font-size-xxxl);
   font-weight: 400;
-  margin-block: 1rem 0;
+  margin-block: 2rem 0;
 }
 
 .home__content > h1 + p {
@@ -496,7 +496,7 @@ div:has(> .home__button) {
   font-size: 2rem;
   height: 17.125rem;
   letter-spacing: 0.125rem;
-  margin: auto auto 0 auto;
+  margin: auto 5rem 0 auto;
   place-content: center;
   text-decoration: none;
   text-transform: uppercase;

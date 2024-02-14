@@ -145,7 +145,7 @@ textarea:not([rows]) {
   grid-template-columns: 3em 6em 1fr 3em;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 67.5em) {
   .container {
     grid-template-columns: 2em 1fr 2em;
   }
@@ -169,7 +169,7 @@ textarea:not([rows]) {
   margin: 0;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 67.5em) {
   main > .container {
     grid-column: 2;
   }
@@ -184,13 +184,13 @@ h1:has(+ .two-column) {
   text-align: start;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 67.5em) {
   h1:has(+ .two-column) {
     grid-column: 3 / -1;
   }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 67.5em) {
   .two-column {
     grid-template-columns: 1fr 1fr;
   }
@@ -209,7 +209,7 @@ body {
   min-height: 100dvh;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 67.5em) {
   body {
     text-align: center;
   }
@@ -278,8 +278,9 @@ header .space-between {
   height: 0.125em;
   opacity: 0.1;
   position: absolute;
-  right: 95%;
+  left: 0;
   top: 50%;
+  transform: translateX(-95%);
   width: 55%;
 }
 
@@ -322,7 +323,7 @@ header .space-between {
   font-weight: 700;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 67.5em) {
   .header__nav > ul {
     gap: 2rem;
     justify-content: center;
@@ -411,11 +412,6 @@ main > .container {
   }
 }
 
-main.home > .container {
-  grid-template-rows: unset;
-  place-content: center;
-}
-
 body:has(.home) {
   background-image: url(./assets/home/background-home-mobile.jpg);
 }
@@ -448,7 +444,7 @@ body:has(.tech) {
   }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 67.5em) {
   body:has(.home) {
     background-image: url(./assets/home/background-home-desktop.jpg);
   }
@@ -464,8 +460,9 @@ body:has(.tech) {
   }
 }
 
-.home__content {
-  margin: auto;
+main.home > .container {
+  grid-template-rows: unset;
+  place-content: center;
 }
 
 .home__eyebrow {
@@ -510,9 +507,13 @@ div:has(> .home__button) {
   box-shadow: 0 0 0 5.5rem rgba(255, 255, 255, 0.5);
 }
 
-@media (max-width: 60em) {
+@media (max-width: 67.5em) {
   main.home > .container {
     place-content: unset;
+  }
+
+  .home__intro {
+    margin-inline: auto;
   }
 
   .home__button {
@@ -543,7 +544,7 @@ main:not(.home) h1 {
   letter-spacing: 4.75px;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 67.5em) {
   main:not(.home) h1 {
     font-size: var(--font-size-m);
     text-align: start;
@@ -562,10 +563,6 @@ main:not(.home) h1 {
 
 .destination h1 {
   margin-block-start: 0;
-}
-
-.destination .two-column {
-  margin-block-start: 3rem;
 }
 
 .destination .two-column > img {
@@ -605,7 +602,7 @@ main:not(.home) h1 {
 .destination__name {
   font-family: var(--font-family-serif);
   font-size: var(--font-size-xxl);
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .destination__desc {
@@ -622,7 +619,9 @@ main:not(.home) h1 {
   margin: 3rem 0 1rem 0;
 }
 
-.destination__content .two-column {
+.destination__facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin: 0;
 }
 
@@ -640,18 +639,13 @@ main:not(.home) h1 {
   margin-block-start: 0.5rem;
 }
 
-@media (max-width: 60em) {
-  .destination .two-column {
-    margin-block-start: 3rem;
-  }
-
+@media (max-width: 67.5em) {
   .destination__img {
     max-width: 18.75rem;
   }
 
   .destination__controls {
     justify-content: center;
-    margin-block-start: 2rem;
   }
 
   .destination__desc {
@@ -727,7 +721,7 @@ main.crew > .container {
 
 .crew__bio {
   max-width: 27.5rem;
-  min-height: 7rem;
+  min-height: 9rem;
   text-wrap: pretty;
 }
 
@@ -761,7 +755,7 @@ main.crew > .container {
   object-position: bottom;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 67.5em) {
   .crew .two-column {
     grid-template-columns: 1fr;
   }
@@ -783,6 +777,7 @@ main.crew > .container {
   .crew__bio {
     margin-inline: auto;
     max-width: 35rem;
+    min-height: 7rem;
   }
 
   .crew__buttons {
@@ -908,7 +903,7 @@ main.crew > .container {
   align-self: center;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 67.5em) {
   .tech .two-column {
     grid-template-columns: subgrid;
     grid-column: 1/-1;
@@ -917,6 +912,7 @@ main.crew > .container {
   .tech__img {
     order: -1;
     grid-column: 1 / -1;
+    margin-inline: auto;
   }
 
   .tech__sidebar {
@@ -946,5 +942,14 @@ main.crew > .container {
   .tech__button {
     font-size: 1rem;
     height: 2.5rem;
+  }
+}
+
+@media (min-width: 100em) {
+  .header__nav > ul {
+    justify-content: center;
+  }
+  .tech__img {
+    margin-inline: auto;
   }
 }

@@ -53,7 +53,7 @@ export default function Tech({ tech }) {
           </div>
           <picture className="tech__img">
             <source
-              media="(min-width: 60em)"
+              media="(min-width: 67.5em)"
               srcSet={tech[currentTechIndex].images.portrait}
             />
             <img src={tech[currentTechIndex].images.landscape} alt="" />

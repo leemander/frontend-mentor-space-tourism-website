@@ -33,6 +33,12 @@
   --font-size-xxs: 0.875rem;
 }
 
+@media (max-width: 67.5rem) {
+  :root {
+    --font-size-xxl: 5rem;
+  }
+}
+
 @media (max-width: 30em) {
   :root {
     --font-size-xxxl: 5rem;
@@ -541,6 +547,7 @@ div:has(> .home__button) {
 }
 
 main:not(.home) h1 {
+  font-size: var(--font-size-m);
   letter-spacing: 4.75px;
 }
 
@@ -577,6 +584,7 @@ main:not(.home) h1 {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  padding-block-start: 2rem;
 }
 
 .destination__controls > button {
@@ -642,10 +650,16 @@ main:not(.home) h1 {
 @media (max-width: 67.5em) {
   .destination__img {
     max-width: 18.75rem;
+    padding-block: 1rem;
   }
 
   .destination__controls {
     justify-content: center;
+    padding: 0;
+  }
+
+  .destination__name {
+    font-size: var(--font-size-xxl);
   }
 
   .destination__desc {
@@ -654,7 +668,7 @@ main:not(.home) h1 {
   }
 
   .destination hr {
-    margin: 0;
+    margin: 1rem 0;
     max-width: unset;
     width: 100%;
   }
@@ -676,6 +690,10 @@ main:not(.home) h1 {
 
   .destination__controls {
     margin: 0;
+  }
+
+  .destination__name {
+    margin-block-start: 1rem;
   }
 
   .destination__facts {
@@ -803,10 +821,6 @@ main.crew > .container {
   .crew h1 {
     height: fit-content;
     order: -10;
-  }
-
-  .crew__content {
-    margin: auto;
   }
 
   .crew__img {
@@ -942,6 +956,15 @@ main.crew > .container {
   .tech__button {
     font-size: 1rem;
     height: 2.5rem;
+  }
+
+  .tech__img {
+    height: 10.625rem;
+  }
+
+  .tech__img > img {
+    object-fit: cover;
+    height: 100%;
   }
 }
 

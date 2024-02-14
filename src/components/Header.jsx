@@ -42,6 +42,7 @@ export default function Header() {
                       ? "header__link current"
                       : "header__link"
                   }
+                  onClick={() => setMenuOpen(false)}
                   to="/"
                 >
                   <span>00</span> Home
@@ -55,6 +56,7 @@ export default function Header() {
                       ? "header__link current"
                       : "header__link"
                   }
+                  onClick={() => setMenuOpen(false)}
                   to="/destination"
                 >
                   <span>01</span> Destination
@@ -68,6 +70,7 @@ export default function Header() {
                       ? "header__link current"
                       : "header__link"
                   }
+                  onClick={() => setMenuOpen(false)}
                   to="/crew"
                 >
                   <span>02</span> Crew
@@ -80,6 +83,7 @@ export default function Header() {
                       ? "header__link current"
                       : "header__link"
                   }
+                  onClick={() => setMenuOpen(false)}
                   to="technology"
                 >
                   <span>03</span> Technology

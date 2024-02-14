@@ -355,12 +355,12 @@ header .space-between {
     right: -100vw;
     height: 100dvh;
     top: 0;
-    transition: ease-in-out 0.4s;
     z-index: 100;
   }
 
   .header__nav.open {
     right: 0;
+    transition: ease-in-out 0.4s;
     width: 68dvw;
   }
 
